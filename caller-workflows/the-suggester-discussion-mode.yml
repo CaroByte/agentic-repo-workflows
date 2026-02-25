@@ -25,7 +25,7 @@ on:
 
 jobs:
   suggest:
-    uses: 0GiS0/agentic-repo/.github/workflows/the-suggester-discussion-mode.yml@main
+    uses: CaroByte/agentic-repo-workflows/.github/workflows/the-suggester-discussion-mode.yml@main
     with:
       suggestion_type: ${{ inputs.suggestion_type }}
     secrets: inherit
