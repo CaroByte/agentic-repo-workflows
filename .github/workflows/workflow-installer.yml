@@ -114,7 +114,7 @@ jobs:
 
               if [ -n "$EXISTING_CONTENT" ]; then
                 # Check if it's already a caller (uses reusable workflow)
-                if echo "$EXISTING_CONTENT" | grep -q "uses: ${OWNER}/agentic-repo/"; then
+                if echo "$EXISTING_CONTENT" | grep -q "uses: ${OWNER}/agentic-repo-workflows/"; then
                   echo "  ⏭️  Already using reusable workflow, skipping: $FILENAME"
                   ALREADY_CALLER="${ALREADY_CALLER}\n- **${FILENAME%.yml}** — already centralized ✅"
                   continue
@@ -154,7 +154,7 @@ jobs:
                 # Create new file
                 gh api "repos/${REPO}/contents/${TARGET_PATH}" \
                   -X PUT \
-                  -f message="🤖 Install ${FILENAME} from agentic-repo" \
+                  -f message="🤖 Install ${FILENAME} from agentic-repo-workflows" \
                   -f content="${CONTENT}" \
                   -f branch="${TARGET_BRANCH}" || {
                   echo "  ❌ Failed to create $FILENAME in $REPO"
@@ -168,12 +168,12 @@ jobs:
             if [ "$CREATE_PR" = "true" ]; then
               # Build PR body based on what we did
               PR_BODY="## 🚀 Agentic Workflows Installation & Centralization"
-              PR_BODY="${PR_BODY}"$'\n\n'"This PR installs/converts workflows to use reusable workflow callers from [\`agentic-repo\`](https://github.com/${OWNER}/agentic-repo)."
+              PR_BODY="${PR_BODY}"$'\n\n'"This PR installs/converts workflows to use reusable workflow callers from [\`agentic-repo-workflows\`](https://github.com/${OWNER}/agentic-repo-workflows)."
               PR_BODY="${PR_BODY}"$'\n\n'"### 📋 Changes Summary"
 
               if [ -n "$CONVERTED" ]; then
                 PR_BODY="${PR_BODY}"$'\n\n'"#### 🔄 Converted to Centralized Workflows"
-                PR_BODY="${PR_BODY}"$'\n'"These workflows were converted from full standalone workflows to lightweight callers that reference the central \`agentic-repo\`:"
+                PR_BODY="${PR_BODY}"$'\n'"These workflows were converted from full standalone workflows to lightweight callers that reference the central \`agentic-repo-workflows\`:"
                 PR_BODY="${PR_BODY}"$'\n'"$(echo -e "$CONVERTED")"
               fi
 
@@ -188,21 +188,21 @@ jobs:
               fi
 
               PR_BODY="${PR_BODY}"$'\n\n'"### 🎯 Benefits of Centralization"
-              PR_BODY="${PR_BODY}"$'\n'"- **Single source of truth**: All logic lives in \`agentic-repo\`"
+              PR_BODY="${PR_BODY}"$'\n'"- **Single source of truth**: All logic lives in \`agentic-repo-workflows\`"
               PR_BODY="${PR_BODY}"$'\n'"- **Automatic updates**: When we improve workflows, all repos benefit instantly"
               PR_BODY="${PR_BODY}"$'\n'"- **Smaller files**: Caller workflows are ~15 lines vs hundreds"
               PR_BODY="${PR_BODY}"$'\n'"- **Consistency**: Same behavior across all your repositories"
               PR_BODY="${PR_BODY}"$'\n\n'"### ⚠️ Required Setup"
               PR_BODY="${PR_BODY}"$'\n'"- Add a \`COPILOT_PAT\` secret to this repository with a GitHub PAT that has Copilot access"
               PR_BODY="${PR_BODY}"$'\n\n'"---"
-              PR_BODY="${PR_BODY}"$'\n'"> 🤖 *This PR was automatically created by the [Workflow Installer](https://github.com/${OWNER}/agentic-repo)*"
+              PR_BODY="${PR_BODY}"$'\n'"> 🤖 *This PR was automatically created by the [Workflow Installer](https://github.com/${OWNER}/agentic-repo-workflows)*"
 
               # Create PR
               PR_URL=$(gh pr create \
                 --repo "$REPO" \
                 --base "$DEFAULT_BRANCH" \
                 --head "$BRANCH" \
-                --title "🤖 Centralize agentic workflows from agentic-repo" \
+                --title "🤖 Centralize agentic workflows from agentic-repo-workflows" \
                 --body "$PR_BODY" 2>&1) || {
                 echo "❌ Failed to create PR in $REPO"
                 continue

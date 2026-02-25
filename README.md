@@ -3,7 +3,7 @@
 <div align="center">
 
 [![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UC140iBrEZbOtvxWsJ-Tb0lQ?style=for-the-badge&logo=youtube&logoColor=white&color=red)](https://www.youtube.com/c/GiselaTorres?sub_confirmation=1)
-[![GitHub followers](https://img.shields.io/github/followers/0GiS0?style=for-the-badge&logo=github&logoColor=white)](https://github.com/0GiS0)
+[![GitHub followers](https://img.shields.io/github/followers/CaroByte?style=for-the-badge&logo=github&logoColor=white)](https://github.com/CaroByte)
 [![LinkedIn Follow](https://img.shields.io/badge/LinkedIn-Follow-blue?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/giselatorresbuitrago/)
 [![X Follow](https://img.shields.io/badge/X-Follow-black?style=for-the-badge&logo=x&logoColor=white)](https://twitter.com/0GiS0)
 
@@ -44,10 +44,10 @@ Copy the caller workflows from `caller-workflows/` to your repo's `.github/workf
 
 ```bash
 # Clone this repo
-git clone https://github.com/0GiS0/agentic-repo.git
+git clone https://github.com/CaroByte/agentic-repo-workflows.git
 
 # Copy the caller workflows you want
-cp agentic-repo/caller-workflows/*.yml your-repo/.github/workflows/
+cp agentic-repo-workflows/caller-workflows/*.yml your-repo/.github/workflows/
 ```
 
 Each caller is ~15 lines and references the main logic here, so you always get the latest version.
@@ -84,7 +84,7 @@ Triggers automatically on PRs that modify code files. Compares changes against e
 ## 📁 Project Structure
 
 ```
-agentic-repo/
+agentic-repo-workflows/
 ├── .github/
 │   └── workflows/
 │       ├── issue-quality-enhancer.yml    # Reusable workflow
@@ -114,7 +114,7 @@ Add this secret to any repo using these workflows:
 <div align="center">
 
 [![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UC140iBrEZbOtvxWsJ-Tb0lQ?style=for-the-badge&logo=youtube&logoColor=white&color=red)](https://www.youtube.com/c/GiselaTorres?sub_confirmation=1)
-[![GitHub followers](https://img.shields.io/github/followers/0GiS0?style=for-the-badge&logo=github&logoColor=white)](https://github.com/0GiS0)
+[![GitHub followers](https://img.shields.io/github/followers/CaroByte?style=for-the-badge&logo=github&logoColor=white)](https://github.com/CaroByte)
 [![LinkedIn Follow](https://img.shields.io/badge/LinkedIn-Follow-blue?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/giselatorresbuitrago/)
 [![X Follow](https://img.shields.io/badge/X-Follow-black?style=for-the-badge&logo=x&logoColor=white)](https://twitter.com/0GiS0)
 
