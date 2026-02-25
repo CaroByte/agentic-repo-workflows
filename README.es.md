@@ -3,7 +3,7 @@
 <div align="center">
 
 [![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UC140iBrEZbOtvxWsJ-Tb0lQ?style=for-the-badge&logo=youtube&logoColor=white&color=red)](https://www.youtube.com/c/GiselaTorres?sub_confirmation=1)
-[![GitHub followers](https://img.shields.io/github/followers/0GiS0?style=for-the-badge&logo=github&logoColor=white)](https://github.com/0GiS0)
+[![GitHub followers](https://img.shields.io/github/followers/CaroByte?style=for-the-badge&logo=github&logoColor=white)](https://github.com/CaroByte)
 [![LinkedIn Follow](https://img.shields.io/badge/LinkedIn-Sígueme-blue?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/giselatorresbuitrago/)
 [![X Follow](https://img.shields.io/badge/X-Sígueme-black?style=for-the-badge&logo=x&logoColor=white)](https://twitter.com/0GiS0)
 
@@ -44,10 +44,10 @@ Copia los caller workflows de `caller-workflows/` a `.github/workflows/` de tu r
 
 ```bash
 # Clona este repo
-git clone https://github.com/0GiS0/agentic-repo.git
+git clone https://github.com/CaroByte/agentic-repo-workflows.git
 
 # Copia los caller workflows que quieras
-cp agentic-repo/caller-workflows/*.yml tu-repo/.github/workflows/
+cp agentic-repo-workflows/caller-workflows/*.yml tu-repo/.github/workflows/
 ```
 
 Cada caller tiene ~15 líneas y referencia la lógica principal aquí, así siempre tienes la última versión.
@@ -84,7 +84,7 @@ Se activa automáticamente en PRs que modifican archivos de código. Compara los
 ## 📁 Estructura del Proyecto
 
 ```
-agentic-repo/
+agentic-repo-workflows/
 ├── .github/
 │   └── workflows/
 │       ├── issue-quality-enhancer.yml    # Workflow reutilizable
@@ -115,7 +115,7 @@ Añade este secreto a cualquier repo que use estos workflows:
 <div align="center">
 
 [![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UC140iBrEZbOtvxWsJ-Tb0lQ?style=for-the-badge&logo=youtube&logoColor=white&color=red)](https://www.youtube.com/c/GiselaTorres?sub_confirmation=1)
-[![GitHub followers](https://img.shields.io/github/followers/0GiS0?style=for-the-badge&logo=github&logoColor=white)](https://github.com/0GiS0)
+[![GitHub followers](https://img.shields.io/github/followers/CaroByte?style=for-the-badge&logo=github&logoColor=white)](https://github.com/CaroByte)
 [![LinkedIn Follow](https://img.shields.io/badge/LinkedIn-Sígueme-blue?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/giselatorresbuitrago/)
 [![X Follow](https://img.shields.io/badge/X-Sígueme-black?style=for-the-badge&logo=x&logoColor=white)](https://twitter.com/0GiS0)
 
