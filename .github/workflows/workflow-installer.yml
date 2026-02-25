@@ -47,7 +47,7 @@ jobs:
           WORKFLOWS: ${{ inputs.workflows }}
           CREATE_PR: ${{ inputs.create_pr }}
         run: |
-          OWNER="0GiS0"
+          OWNER="CaroByte"
 
           # Determine which workflow files to install
           if [ "$WORKFLOWS" = "all" ]; then
