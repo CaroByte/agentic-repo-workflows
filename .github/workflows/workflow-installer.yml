@@ -78,7 +78,7 @@ jobs:
 
             if [ "$CREATE_PR" = "true" ]; then
               # Create a branch for the PR
-              BRANCH="agentic-workflows/install-$(date +%Y%m%d%H%M%S)"
+              BRANCH="agentic-workflows-workflows/install-$(date +%Y%m%d%H%M%S)"
               DEFAULT_BRANCH=$(gh api "repos/${REPO}" --jq '.default_branch')
 
               # Get the SHA of the default branch
@@ -127,7 +127,7 @@ jobs:
                   # Update existing file with caller version
                   gh api "repos/${REPO}/contents/${TARGET_PATH}" \
                     -X PUT \
-                    -f message="🔄 Convert ${FILENAME} to use centralized reusable workflow from agentic-repo" \
+                    -f message="🔄 Convert ${FILENAME} to use centralized reusable workflow from agentic-repo-workflows" \
                     -f content="${CONTENT}" \
                     -f sha="${EXISTING_SHA}" \
                     -f branch="${TARGET_BRANCH}" || {
@@ -140,7 +140,7 @@ jobs:
                   # Unknown workflow, update anyway
                   gh api "repos/${REPO}/contents/${TARGET_PATH}" \
                     -X PUT \
-                    -f message="🤖 Update ${FILENAME} from agentic-repo" \
+                    -f message="🤖 Update ${FILENAME} from agentic-repo-workflows" \
                     -f content="${CONTENT}" \
                     -f sha="${EXISTING_SHA}" \
                     -f branch="${TARGET_BRANCH}" || {
